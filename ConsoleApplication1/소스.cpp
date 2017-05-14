@@ -65,6 +65,8 @@ int main()
 		printf("%d 등급입니다.\n", grade);
 	}
 
+	system("pause");
+
 }
 
 int Cirno()
