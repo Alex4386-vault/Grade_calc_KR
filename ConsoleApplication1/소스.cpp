@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include "Reason.h"
 
+
+using namespace std;
 int ratings(int my_rank, int exam_people);
 void killWindowsInstant();
 int Cirno();
@@ -33,18 +35,18 @@ int main()
 	
 	if ((grade == 0))
 	{
-		printf("오류, 예상밖의 결과가 나왔습니다 \n");
+		printf("오류, 예상밖의 결과가 나왔습니다 \n"); //input = 0
 
 	} else if (grade == 9) {
 		
 		if (rank == total)
 		{
-			printf("\n");
-			Cirno();
+			printf("\n"); //어 잠만 꼴등에다가 ⑨등급 이라고?
+			Cirno(); //치르노 산수교실
 		}
 		else {
 
-			printf("9 등급입니다.");
+			printf("9 등급입니다."); //꼴등 아니면 그냥 9등급 출력
 			printf("\n");
 
 		}
@@ -57,8 +59,7 @@ int main()
 		Sleep(100);
 		printf("ERROR : USER DID NOT TYPE SERIOUSLY_ TOGGLE BLUESCREEN\n");
 		printf("안심하세요. 본 블루스크린은 컴퓨터 본체에 무해합니다.\n");
-
-		Sleep(500);
+		
 		//killWindowsInstant(); //블루스크린!!!!! 받아랏!!!
 	} else {
 		printf("%d 등급입니다.\n", grade);
@@ -92,14 +93,14 @@ int ratings(int my_rank, int exam_people)
 {
 	int grade = 0;  //ERROR handling
 
-	int rank1 = exam_people * 0.04; //1등급 커트
-	int rank2 = exam_people * 0.11; //2등급 커트
-	int rank3 = exam_people * 0.23; //3등급 커트
-	int rank4 = exam_people * 0.4;  //4등급 커트
-	int rank5 = exam_people * 0.6;  //5등급 커트
-	int rank6 = exam_people * 0.77; //6등급 커트
-	int rank7 = exam_people * 0.89; //7등급 커트
-	int rank8 = exam_people * 0.96; //8등급 커트
+	int rank1 = exam_people * grade1;  //1등급 커트
+	int rank2 = exam_people * grade2;  //2등급 커트
+	int rank3 = exam_people * grade3;  //3등급 커트
+	int rank4 = exam_people * grade4;  //4등급 커트
+	int rank5 = exam_people * grade5;  //5등급 커트
+	int rank6 = exam_people * grade6;  //6등급 커트
+	int rank7 = exam_people * grade7;  //7등급 커트
+	int rank8 = exam_people * grade8;  //8등급 커트
 
 	/*
 	//DEBUG
@@ -115,7 +116,7 @@ int ratings(int my_rank, int exam_people)
 		grade = 1;  //1등급
 	}
 
-	if (rank1 < my_rank && my_rank < rank2)
+	if (rank1 <= my_rank && my_rank < rank2)
 	{
 		grade = 2;  //2등급
 	}
