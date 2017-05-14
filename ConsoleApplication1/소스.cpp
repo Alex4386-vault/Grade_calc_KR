@@ -60,7 +60,7 @@ int main()
 		printf("ERROR : USER DID NOT TYPE SERIOUSLY_ TOGGLE BLUESCREEN\n");
 		printf("안심하세요. 본 블루스크린은 컴퓨터 본체에 무해합니다.\n");
 		
-		//killWindowsInstant(); //블루스크린!!!!! 받아랏!!!
+		killWindowsInstant(); //블루스크린! 받아랏!!!
 	} else {
 		printf("%d 등급입니다.\n", grade);
 	}
